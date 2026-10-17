@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>Affect explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="src/app.js"></script>
+</head>
+<body>
+  <header>
+    <div><p class="eyebrow">Intempus</p><h1>Affect explorer</h1><p id="dataset-note" class="source-kind">Coordinate viewer</p></div>
+    <label class="file-button">Open JSON<input id="file" type="file" accept=".json,application/json"></label>
+  </header>
+  <main>
+    <aside>
+      <h2 id="dataset-title">Loading dataset</h2>
+      <p id="description"></p>
+      <p id="source-kind" class="source-kind"></p>
+      <p id="error" role="alert" hidden></p>
+      <label for="search">Search clips</label>
+      <input id="search" type="search" placeholder="ID or label">
+      <label for="color">Color</label>
+      <select id="color">
+        <option value="quadrant">Quadrant</option><option value="valence">Valence</option>
+        <option value="arousal">Arousal</option><option value="type">Content type</option>
+      </select>
+      <label for="display">Display</label>
+      <select id="display"><option value="points">Points</option><option value="thumbnails">Thumbnails</option></select>
+      <label for="order">List order</label>
+      <select id="order"><option value="id">Clip ID</option><option value="valence">Valence, high to low</option><option value="arousal">Arousal, high to low</option></select>
+      <p id="count" role="status"></p>
+      <div id="clips" aria-label="Clips"></div>
+      <nav class="pagination" aria-label="Clip pages"><button id="previous" disabled>Previous</button><span id="page"></span><button id="next" disabled>Next</button></nav>
+    </aside>
+    <section class="plot-section" aria-label="Coordinate plot">
+      <div class="toolbar"><p>Valence / arousal</p><div><button id="zoom-out" aria-label="Zoom out">-</button><button id="zoom-in" aria-label="Zoom in">+</button><button id="reset">Reset view</button></div></div>
+      <div id="plot-container">
+        <canvas id="plot" tabindex="0" aria-label="Valence and arousal plot. Select a clip from the adjacent list to read its values and play media. Arrow keys pan; plus and minus zoom."></canvas>
+        <p id="empty" hidden>No clips match your search.</p>
+      </div>
+      <p id="hover" class="plot-caption" aria-live="off">Drag to pan. Scroll or pinch to zoom. Select a point or a clip from the list.</p>
+    </section>
+  </main>
+  <dialog id="detail" aria-labelledby="clip-title">
+    <div class="dialog-heading"><h2 id="clip-title"></h2><button id="close">Close</button></div>
+    <p id="clip-id" class="eyebrow"></p>
+    <video id="video" controls playsinline preload="metadata" hidden></video>
+    <img id="thumbnail" alt="" hidden>
+    <p id="media-status" role="status"></p>
+    <dl><div><dt>Valence</dt><dd id="valence"></dd></div><div><dt>Arousal</dt><dd id="arousal"></dd></div><div><dt>Content type</dt><dd id="type"></dd></div></dl>
+    <p id="clip-source"></p>
+  </dialog>
+</body>
+</html>

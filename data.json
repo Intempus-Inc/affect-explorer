@@ -1,0 +1,80 @@
+{
+  "format_version": 1,
+  "title": "Synthetic coordinates",
+  "description": "Eight invented points with simple generated clips, included to demonstrate the viewer.",
+  "synthetic": true,
+  "clips": [
+    {
+      "id": "example-01",
+      "label": "Example 01",
+      "valence": 0.15,
+      "arousal": 0.2,
+      "type": "scene",
+      "thumbnail": "media/example-1.svg",
+      "video": "media/example-1.mp4"
+    },
+    {
+      "id": "example-02",
+      "label": "Example 02",
+      "valence": 0.25,
+      "arousal": 0.8,
+      "type": "scene",
+      "thumbnail": "media/example-2.svg",
+      "video": "media/example-2.mp4"
+    },
+    {
+      "id": "example-03",
+      "label": "Example 03",
+      "valence": 0.4,
+      "arousal": 0.45,
+      "type": "scene",
+      "thumbnail": "media/example-3.svg",
+      "video": "media/example-3.mp4"
+    },
+    {
+      "id": "example-04",
+      "label": "Example 04",
+      "valence": 0.5,
+      "arousal": 0.5,
+      "type": "scene",
+      "thumbnail": "media/example-4.svg",
+      "video": "media/example-4.mp4"
+    },
+    {
+      "id": "example-05",
+      "label": "Example 05",
+      "valence": 0.65,
+      "arousal": 0.2,
+      "type": "scene",
+      "thumbnail": "media/example-1.svg",
+      "video": "media/example-1.mp4"
+    },
+    {
+      "id": "example-06",
+      "label": "Example 06",
+      "valence": 0.75,
+      "arousal": 0.6,
+      "type": "scene",
+      "thumbnail": "media/example-2.svg",
+      "video": "media/example-2.mp4"
+    },
+    {
+      "id": "example-07",
+      "label": "Example 07",
+      "valence": 0.9,
+      "arousal": 0.9,
+      "type": "scene",
+      "thumbnail": "media/example-3.svg",
+      "video": "media/example-3.mp4"
+    },
+    {
+      "id": "example-08",
+      "label": "Example 08",
+      "valence": 0.1,
+      "arousal": 0.6,
+      "type": "scene",
+      "thumbnail": "media/example-4.svg",
+      "video": "media/example-4.mp4"
+    }
+  ]
+}
